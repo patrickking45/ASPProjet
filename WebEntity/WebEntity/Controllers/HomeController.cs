@@ -20,6 +20,10 @@ namespace WebEntity.Controllers
             return View();
         }
 
+        public ActionResult Testing() {
+            return View();
+        }
+        
       /**  public ActionResult Contact()
         {
             using (Models.NorthwndEntities context = new Models.NorthwndEntities())
