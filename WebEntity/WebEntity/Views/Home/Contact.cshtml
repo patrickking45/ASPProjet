@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Liste de produits";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<style type="text/css">
+    table,tr,td,th {
+        border: 3px black solid;
+        padding:10px 10px 10px 10px;
+    }
+</style>
+<table>
+    <tr>
+        <th>Products</th>
+        <th>Product name</th>
+        <th>QuantityPerUnit</th>
+        <th>UnitPrice</th>
+        <th>UnitsInStock</th>
+        <th>UnitsOnOrder</th>
+        <th>ReorderLevel</th>
+        <th>Discontinued</th>
+        <th>CategoryName</th>
+        <th>CompanyName</th>
+        <th>Actions</th>
+
+    </tr>
+    @foreach (var pro in ViewBag.info)
+        {
+        <tr>
+            <td>@pro.ProductID</td>
+            <td>@pro.ProductName</td>
+            <td>@pro.QuantityPerUnit</td>
+            <td>@pro.UnitPrice</td>
+            <td>@pro.UnitsInStock</td>
+            <td>@pro.UnitsOnOrder</td>
+            <td>@pro.ReorderLevel</td>
+            <td>@pro.Discontinued</td>
+            <td>@pro.Categories.CategoryName</td>
+
+
+
+
+        </tr>
+}
+</table>
